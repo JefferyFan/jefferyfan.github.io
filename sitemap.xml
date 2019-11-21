@@ -86,7 +86,7 @@
   </url>
   
   <url>
-    <loc>http://jefferyfan.com/2016/01/10/programing/iOS/reloadSections/</loc>
+    <loc>http://jefferyfan.com/2016/07/14/programing/iOS/nsstring-trap/</loc>
     
     <lastmod>2019-11-04T10:04:07.552Z</lastmod>
     
@@ -100,7 +100,7 @@
   </url>
   
   <url>
-    <loc>http://jefferyfan.com/2016/07/14/programing/iOS/nsstring-trap/</loc>
+    <loc>http://jefferyfan.com/2016/01/10/programing/iOS/reloadSections/</loc>
     
     <lastmod>2019-11-04T10:04:07.552Z</lastmod>
     
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://jefferyfan.com/2015/08/02/programing/iOS/blogpost/01DeepInRunLoop/</loc>
+    <loc>http://jefferyfan.com/2016/11/13/programing/iOS/CATransaction-trap/</loc>
     
     <lastmod>2019-11-04T10:04:07.551Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://jefferyfan.com/2016/11/13/programing/iOS/CATransaction-trap/</loc>
+    <loc>http://jefferyfan.com/2015/08/02/programing/iOS/blogpost/01DeepInRunLoop/</loc>
     
     <lastmod>2019-11-04T10:04:07.551Z</lastmod>
     
@@ -142,13 +142,6 @@
   </url>
   
   <url>
-    <loc>http://jefferyfan.com/2017/05/07/programing/design-pattern/decorator/</loc>
-    
-    <lastmod>2019-11-04T10:04:07.550Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://jefferyfan.com/2016/07/16/programing/algorithm/dfs-gfs-sudo/</loc>
     
     <lastmod>2019-11-04T10:04:07.550Z</lastmod>
@@ -156,14 +149,21 @@
   </url>
   
   <url>
-    <loc>http://jefferyfan.com/2016/07/24/guide/hexo-custom-host-vps/</loc>
+    <loc>http://jefferyfan.com/2017/05/07/programing/design-pattern/decorator/</loc>
+    
+    <lastmod>2019-11-04T10:04:07.550Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jefferyfan.com/2015/07/22/guide/hexo-guide/</loc>
     
     <lastmod>2019-11-04T10:04:07.549Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://jefferyfan.com/2015/07/22/guide/hexo-guide/</loc>
+    <loc>http://jefferyfan.com/2016/07/24/guide/hexo-custom-host-vps/</loc>
     
     <lastmod>2019-11-04T10:04:07.549Z</lastmod>
     
