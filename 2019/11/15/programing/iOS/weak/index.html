@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;jefferyfan.com&#x2F;images&#x2F;weak-disassembly.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;jefferyfan.com&#x2F;images&#x2F;weak-struct.png">
-<meta property="og:updated_time" content="2019-11-15T13:10:04.998Z">
+<meta property="og:updated_time" content="2019-11-21T14:39:51.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;jefferyfan.com&#x2F;images&#x2F;weak-disassembly.png">
 
@@ -288,7 +288,7 @@
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">id</span> referent = [<span class="built_in">NSObject</span> new];</span><br><span class="line">    __<span class="keyword">weak</span> <span class="keyword">id</span> weakObj = referent;</span><br><span class="line">    <span class="built_in">NSLog</span>(@“%@“, weakObj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在 Xcode 中勾选 Debug -&gt; Debug Workflow -&gt; Always Show Disassembly，然后在 NSLog 行加个断点，运行之后可以看到这样一段汇编代码：</p>
-<p><img src="/images/weak-disassembly.png" alt="3B5E5D02-92A9-4E58-A159-D7B453ECAF31"></p>
+<p><img src="/images/weak-disassembly.png" alt="disassembly code"></p>
 <a id="more"></a>
 
 <p>这里可以看到 3 个 weak 相关的函数，很容易对应到刚刚的三行代码中。</p>
@@ -296,7 +296,7 @@
 
 <p>知道这三个函数那就好说了，从 github 上可以下载到 runtime 的源码来研究。<a href="https://github.com/opensource-apple/objc4" target="_blank" rel="noopener">GitHub - opensource-apple/objc4</a></p>
 <h3 id="底层存储结构"><a href="#底层存储结构" class="headerlink" title="底层存储结构"></a>底层存储结构</h3><p>这里不过多的粘贴源码，简单介绍下 weak 底层的存储结构。</p>
-<p><img src="/images/weak-struct.png" alt="未命名 P1 2"></p>
+<p><img src="/images/weak-struct.png" alt="weak 底层存储结构"></p>
 <p>先解释两个单词，referent 是指 weak 变量指向的对象，referrer 是指 weak 变量。</p>
 <p>最外层是一个 <code>StripedMap</code>，以 referent 实例地址作为 key，通过哈希，平均映射到 64 个 <code>SideTable</code> 中。<br><code>SideTable</code> 中最关键的一个成员是 <code>weak_table</code>，<code>weak_table</code> 的成员 <code>weak_entries</code> 是一个 <code>weak_entry_t</code> 结构体数组，每一个 <code>weak_entry_t</code> 结构体都保存着 referent 地址和指向这个 referent 的所有 weak 变量地址，也就是 referrers 数组。</p>
 <h3 id="runtime-源码解释"><a href="#runtime-源码解释" class="headerlink" title="runtime 源码解释"></a>runtime 源码解释</h3><p>了解了结构，再来单独聊聊刚刚在汇编中看到的几个函数。</p>

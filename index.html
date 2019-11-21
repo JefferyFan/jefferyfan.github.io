@@ -270,7 +270,7 @@
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">id</span> referent = [<span class="built_in">NSObject</span> new];</span><br><span class="line">    __<span class="keyword">weak</span> <span class="keyword">id</span> weakObj = referent;</span><br><span class="line">    <span class="built_in">NSLog</span>(@“%@“, weakObj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在 Xcode 中勾选 Debug -&gt; Debug Workflow -&gt; Always Show Disassembly，然后在 NSLog 行加个断点，运行之后可以看到这样一段汇编代码：</p>
-<p><img src="/images/weak-disassembly.png" alt="3B5E5D02-92A9-4E58-A159-D7B453ECAF31"></p>
+<p><img src="/images/weak-disassembly.png" alt="disassembly code"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/11/15/programing/iOS/weak/#more" rel="contents">
