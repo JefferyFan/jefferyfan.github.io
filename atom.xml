@@ -18,8 +18,8 @@
   
   <entry>
     <title>iOS weak 的底层实现原理</title>
-    <link href="http://jefferyfan.com/2019/11/15/programing/iOS/weak/"/>
-    <id>http://jefferyfan.com/2019/11/15/programing/iOS/weak/</id>
+    <link href="http://jefferyfan.com/programing/iOS/weak/"/>
+    <id>http://jefferyfan.com/programing/iOS/weak/</id>
     <published>2019-11-15T12:47:26.000Z</published>
     <updated>2019-11-15T13:10:04.998Z</updated>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>iOS 教程（三）事件响应链</title>
-    <link href="http://jefferyfan.com/2019/11/06/programing/iOS/tutorial/03responder/"/>
-    <id>http://jefferyfan.com/2019/11/06/programing/iOS/tutorial/03responder/</id>
+    <link href="http://jefferyfan.com/programing/iOS/tutorial/03responder/"/>
+    <id>http://jefferyfan.com/programing/iOS/tutorial/03responder/</id>
     <published>2019-11-06T14:44:19.000Z</published>
     <updated>2019-11-15T13:04:17.183Z</updated>
     
@@ -94,8 +94,8 @@
   
   <entry>
     <title>如何屏蔽 Universal Link 调端？</title>
-    <link href="http://jefferyfan.com/2018/03/17/programing/iOS/block-universal-link/"/>
-    <id>http://jefferyfan.com/2018/03/17/programing/iOS/block-universal-link/</id>
+    <link href="http://jefferyfan.com/programing/iOS/block-universal-link/"/>
+    <id>http://jefferyfan.com/programing/iOS/block-universal-link/</id>
     <published>2018-03-17T07:56:20.000Z</published>
     <updated>2019-11-15T12:52:59.934Z</updated>
     
@@ -127,8 +127,8 @@
   
   <entry>
     <title>装饰者模式（Decorator）</title>
-    <link href="http://jefferyfan.com/2017/05/07/programing/design-pattern/decorator/"/>
-    <id>http://jefferyfan.com/2017/05/07/programing/design-pattern/decorator/</id>
+    <link href="http://jefferyfan.com/programing/design-pattern/decorator/"/>
+    <id>http://jefferyfan.com/programing/design-pattern/decorator/</id>
     <published>2017-05-07T04:49:01.000Z</published>
     <updated>2019-11-04T10:04:07.550Z</updated>
     
@@ -163,8 +163,8 @@
   
   <entry>
     <title>Python 学习笔记</title>
-    <link href="http://jefferyfan.com/2017/05/03/programing/python/python/"/>
-    <id>http://jefferyfan.com/2017/05/03/programing/python/python/</id>
+    <link href="http://jefferyfan.com/programing/python/python/"/>
+    <id>http://jefferyfan.com/programing/python/python/</id>
     <published>2017-05-03T14:41:08.000Z</published>
     <updated>2019-11-04T10:04:07.555Z</updated>
     
@@ -190,8 +190,8 @@
   
   <entry>
     <title>观察者模式（Observer Pattern）</title>
-    <link href="http://jefferyfan.com/2017/04/20/programing/design-pattern/observer/"/>
-    <id>http://jefferyfan.com/2017/04/20/programing/design-pattern/observer/</id>
+    <link href="http://jefferyfan.com/programing/design-pattern/observer/"/>
+    <id>http://jefferyfan.com/programing/design-pattern/observer/</id>
     <published>2017-04-20T15:33:07.000Z</published>
     <updated>2019-11-04T10:04:07.550Z</updated>
     
@@ -226,8 +226,8 @@
   
   <entry>
     <title>Hexo 自定义域名（托管在 Github）</title>
-    <link href="http://jefferyfan.com/2017/04/18/guide/hexo-github-custom-host/"/>
-    <id>http://jefferyfan.com/2017/04/18/guide/hexo-github-custom-host/</id>
+    <link href="http://jefferyfan.com/guide/hexo-github-custom-host/"/>
+    <id>http://jefferyfan.com/guide/hexo-github-custom-host/</id>
     <published>2017-04-18T14:40:24.000Z</published>
     <updated>2019-11-04T10:04:07.549Z</updated>
     
@@ -259,8 +259,8 @@
   
   <entry>
     <title>策略模式（Strategy Pattern）</title>
-    <link href="http://jefferyfan.com/2017/04/16/programing/design-pattern/strategy/"/>
-    <id>http://jefferyfan.com/2017/04/16/programing/design-pattern/strategy/</id>
+    <link href="http://jefferyfan.com/programing/design-pattern/strategy/"/>
+    <id>http://jefferyfan.com/programing/design-pattern/strategy/</id>
     <published>2017-04-16T11:17:32.000Z</published>
     <updated>2019-11-04T10:04:07.550Z</updated>
     
@@ -297,8 +297,8 @@
   
   <entry>
     <title>使用WKWebView打开itunes链接无法跳转至AppStore</title>
-    <link href="http://jefferyfan.com/2017/04/10/programing/iOS/wkwebview-itunes/"/>
-    <id>http://jefferyfan.com/2017/04/10/programing/iOS/wkwebview-itunes/</id>
+    <link href="http://jefferyfan.com/programing/iOS/wkwebview-itunes/"/>
+    <id>http://jefferyfan.com/programing/iOS/wkwebview-itunes/</id>
     <published>2017-04-09T17:35:18.000Z</published>
     <updated>2019-11-04T10:04:07.553Z</updated>
     
@@ -330,8 +330,8 @@
   
   <entry>
     <title>CATransaction 踩坑：completion block 没有立即调用</title>
-    <link href="http://jefferyfan.com/2016/11/13/programing/iOS/CATransaction-trap/"/>
-    <id>http://jefferyfan.com/2016/11/13/programing/iOS/CATransaction-trap/</id>
+    <link href="http://jefferyfan.com/programing/iOS/CATransaction-trap/"/>
+    <id>http://jefferyfan.com/programing/iOS/CATransaction-trap/</id>
     <published>2016-11-13T10:53:21.000Z</published>
     <updated>2019-11-04T10:04:07.551Z</updated>
     
@@ -362,8 +362,8 @@
   
   <entry>
     <title>大端规则和小端规则</title>
-    <link href="http://jefferyfan.com/2016/08/07/programing/base/big-little-endian/"/>
-    <id>http://jefferyfan.com/2016/08/07/programing/base/big-little-endian/</id>
+    <link href="http://jefferyfan.com/programing/base/big-little-endian/"/>
+    <id>http://jefferyfan.com/programing/base/big-little-endian/</id>
     <published>2016-08-07T11:24:03.000Z</published>
     <updated>2019-11-05T08:01:41.655Z</updated>
     
@@ -406,8 +406,8 @@
   
   <entry>
     <title>Hexo博客自定义域名和部署到VPS</title>
-    <link href="http://jefferyfan.com/2016/07/24/guide/hexo-custom-host-vps/"/>
-    <id>http://jefferyfan.com/2016/07/24/guide/hexo-custom-host-vps/</id>
+    <link href="http://jefferyfan.com/guide/hexo-custom-host-vps/"/>
+    <id>http://jefferyfan.com/guide/hexo-custom-host-vps/</id>
     <published>2016-07-24T07:47:40.000Z</published>
     <updated>2019-11-04T10:04:07.549Z</updated>
     
@@ -443,8 +443,8 @@
   
   <entry>
     <title>广搜&amp;深搜算法和数独求解</title>
-    <link href="http://jefferyfan.com/2016/07/16/programing/algorithm/dfs-gfs-sudo/"/>
-    <id>http://jefferyfan.com/2016/07/16/programing/algorithm/dfs-gfs-sudo/</id>
+    <link href="http://jefferyfan.com/programing/algorithm/dfs-gfs-sudo/"/>
+    <id>http://jefferyfan.com/programing/algorithm/dfs-gfs-sudo/</id>
     <published>2016-07-16T06:47:36.000Z</published>
     <updated>2019-11-04T10:04:07.550Z</updated>
     
@@ -471,8 +471,8 @@
   
   <entry>
     <title>NSString踩坑</title>
-    <link href="http://jefferyfan.com/2016/07/14/programing/iOS/nsstring-trap/"/>
-    <id>http://jefferyfan.com/2016/07/14/programing/iOS/nsstring-trap/</id>
+    <link href="http://jefferyfan.com/programing/iOS/nsstring-trap/"/>
+    <id>http://jefferyfan.com/programing/iOS/nsstring-trap/</id>
     <published>2016-07-14T14:22:00.000Z</published>
     <updated>2019-11-04T10:04:07.552Z</updated>
     
@@ -505,8 +505,8 @@
   
   <entry>
     <title>利用mask实现icon颜色变换</title>
-    <link href="http://jefferyfan.com/2016/07/13/programing/iOS/ios-image-mask/"/>
-    <id>http://jefferyfan.com/2016/07/13/programing/iOS/ios-image-mask/</id>
+    <link href="http://jefferyfan.com/programing/iOS/ios-image-mask/"/>
+    <id>http://jefferyfan.com/programing/iOS/ios-image-mask/</id>
     <published>2016-07-13T15:26:00.000Z</published>
     <updated>2019-11-04T10:04:07.552Z</updated>
     
@@ -534,8 +534,8 @@
   
   <entry>
     <title>理解CATransaction</title>
-    <link href="http://jefferyfan.com/2016/06/27/programing/iOS/CATransaction/"/>
-    <id>http://jefferyfan.com/2016/06/27/programing/iOS/CATransaction/</id>
+    <link href="http://jefferyfan.com/programing/iOS/CATransaction/"/>
+    <id>http://jefferyfan.com/programing/iOS/CATransaction/</id>
     <published>2016-06-27T07:49:50.000Z</published>
     <updated>2019-11-04T10:04:07.551Z</updated>
     
@@ -572,8 +572,8 @@
   
   <entry>
     <title>iOS教程（二）消息发送</title>
-    <link href="http://jefferyfan.com/2016/01/24/programing/iOS/tutorial/02MethodResolve/"/>
-    <id>http://jefferyfan.com/2016/01/24/programing/iOS/tutorial/02MethodResolve/</id>
+    <link href="http://jefferyfan.com/programing/iOS/tutorial/02MethodResolve/"/>
+    <id>http://jefferyfan.com/programing/iOS/tutorial/02MethodResolve/</id>
     <published>2016-01-24T05:24:16.000Z</published>
     <updated>2019-11-11T09:31:24.701Z</updated>
     
@@ -606,8 +606,8 @@
   
   <entry>
     <title>UITableView reloadSections引发的崩溃</title>
-    <link href="http://jefferyfan.com/2016/01/10/programing/iOS/reloadSections/"/>
-    <id>http://jefferyfan.com/2016/01/10/programing/iOS/reloadSections/</id>
+    <link href="http://jefferyfan.com/programing/iOS/reloadSections/"/>
+    <id>http://jefferyfan.com/programing/iOS/reloadSections/</id>
     <published>2016-01-10T13:53:36.000Z</published>
     <updated>2019-11-04T10:04:07.552Z</updated>
     
@@ -635,8 +635,8 @@
   
   <entry>
     <title>博文介绍（一）《深入理解RunLoop》</title>
-    <link href="http://jefferyfan.com/2015/08/02/programing/iOS/blogpost/01DeepInRunLoop/"/>
-    <id>http://jefferyfan.com/2015/08/02/programing/iOS/blogpost/01DeepInRunLoop/</id>
+    <link href="http://jefferyfan.com/programing/iOS/blogpost/01DeepInRunLoop/"/>
+    <id>http://jefferyfan.com/programing/iOS/blogpost/01DeepInRunLoop/</id>
     <published>2015-08-02T11:37:43.000Z</published>
     <updated>2019-11-04T10:04:07.551Z</updated>
     
@@ -671,8 +671,8 @@
   
   <entry>
     <title>Hexo博客使用教程</title>
-    <link href="http://jefferyfan.com/2015/07/22/guide/hexo-guide/"/>
-    <id>http://jefferyfan.com/2015/07/22/guide/hexo-guide/</id>
+    <link href="http://jefferyfan.com/guide/hexo-guide/"/>
+    <id>http://jefferyfan.com/guide/hexo-guide/</id>
     <published>2015-07-22T13:37:20.000Z</published>
     <updated>2019-11-04T10:04:07.549Z</updated>
     
