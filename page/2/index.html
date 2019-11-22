@@ -197,6 +197,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://jefferyfan.com/2016/11/13/programing/iOS/CATransaction-trap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/portrait.jpg">
+      <meta itemprop="name" content="Jeffery Fan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeffery's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/11/13/programing/iOS/CATransaction-trap/" class="post-title-link" itemprop="url">CATransaction 踩坑：completion block 没有立即调用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-11-13 18:53:21" itemprop="dateCreated datePublished" datetime="2016-11-13T18:53:21+08:00">2016-11-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programing/" itemprop="url" rel="index">
+                    <span itemprop="name">Programing</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programing/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2016/11/13/programing/iOS/CATransaction-trap/" class="post-meta-item leancloud_visitors" data-flag-title="CATransaction 踩坑：completion block 没有立即调用" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>之前写过一篇博客，介绍CATransaction的使用：<a href="/2016/06/27/programing/iOS/CATransaction/">理解CATransaction</a>。文中提到，当需要监听动画结束时，可以利用<code>-[CATransaction setCompletionBlock:]</code>方法监听动画的结束，而不用修改接口参数。然而，利用这个方法监听动画结束，有一定的风险会导致 completionBlock 不被调用。</p>
+<p>简单例子如下：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">CATransaction</span> begin];</span><br><span class="line">[<span class="built_in">CATransaction</span> setCompletionBlock:^&#123;</span><br><span class="line">    <span class="comment">//complete block</span></span><br><span class="line">&#125;];</span><br><span class="line">[<span class="keyword">self</span> doAnimation]</span><br><span class="line">[<span class="built_in">CATransaction</span> commit];</span><br></pre></td></tr></table></figure>
+
+<p>一般情况下 completionBlock都会被调用。</p>
+<p><strong>但是当<code>[self doAnimation]</code>中做了一个<code>repeatCount=HUGE_VALF</code>的动画时，动画永远不会结束，因此， completionBlock 就永远不会被调用。</strong></p>
+<p>在同一个类中利用<code>CATransaction</code>来监听动画结束问题不大，但是做动画的代码中还会调用外面的类的话，就需要小心了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://jefferyfan.com/2016/08/07/programing/base/big-little-endian/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1074,112 +1164,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://jefferyfan.com/2015/07/22/guide/hexo-guide/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/portrait.jpg">
-      <meta itemprop="name" content="Jeffery Fan">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jeffery's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2015/07/22/guide/hexo-guide/" class="post-title-link" itemprop="url">Hexo博客使用教程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2015-07-22 21:37:20" itemprop="dateCreated datePublished" datetime="2015-07-22T21:37:20+08:00">2015-07-22</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Guide/" itemprop="url" rel="index">
-                    <span itemprop="name">Guide</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Guide/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2015/07/22/guide/hexo-guide/" class="post-meta-item leancloud_visitors" data-flag-title="Hexo博客使用教程" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>整理了一下Hexo博客使用方法和技巧。不定期更新Hexo的主题。</p>
-<p><em>最直接的文档资料获取：<a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo官网</a></em></p>
-<h3 id="Windows下Hexo安装配置"><a href="#Windows下Hexo安装配置" class="headerlink" title="Windows下Hexo安装配置"></a>Windows下Hexo安装配置</h3><ul>
-<li>下载安装<a href="https://msysgit.github.io/" target="_blank" rel="noopener">GitBash</a></li>
-<li>安装<a href="https://nodejs.org/download/" target="_blank" rel="noopener">Node.js</a></li>
-<li>安装Hexo<ol>
-<li><code>npm install -g hexo-cli</code></li>
-<li><code>npm install hexo --save</code></li>
-</ol>
-</li>
-</ul>
-<h3 id="Mac下Hexo安装配置"><a href="#Mac下Hexo安装配置" class="headerlink" title="Mac下Hexo安装配置"></a>Mac下Hexo安装配置</h3><p>最近新入手一台Mac。在此记录下Mac的Hexo配置。</p>
-<ul>
-<li>安装Node。先安装<a href="http://brew.sh/" target="_blank" rel="noopener">Homebrew</a>。然后运行命令<code>sudo brew install node</code>。</li>
-<li>安装Hexo。正常情况下，运行命令：<code>sudo npm install -g hexo-cli</code>。<br>但是不知道是网络不好还是怎样，一直报Error。尝试<code>sudo npm install -g hexo-cli --registry=https://registry.npm.taobao.org</code>成功！</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2015/07/22/guide/hexo-guide/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1230,7 +1214,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1243,7 +1227,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
