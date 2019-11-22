@@ -360,6 +360,21 @@
 <li>类信息保存在 class_ro_t 结构体中，其中 ivars 保存所有成员变量的偏移量等信息，同时用 instanceSize 记录类的大小。</li>
 <li>App 启动时，调用 moveIvars 方法更新 ivar-&gt;offset 和 instanceSize，创建实例时根据 instanceSize 来申请所需内存。</li>
 </ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.sealiesoftware.com/blog/archive/2009/01/27/objc_explain_Non-fragile_ivars.html" target="_blank" rel="noopener">Hamster Emporium: objc explain: Non-fragile ivars</a></li>
+<li><a href="http://www.cocoawithlove.com/2010/03/dynamic-ivars-solving-fragile-base.html" target="_blank" rel="noopener">Dynamic ivars: solving a fragile base class problem</a></li>
+<li><a href="https://www.jianshu.com/p/c105a65da934" target="_blank" rel="noopener">Mach-O文件介绍之ASLR(进程地址空间布局随机化) - 简书</a></li>
+<li><a href="https://winddoing.github.io/post/7190.html" target="_blank" rel="noopener">ARMv8-aarch64寄存器和指令集 | Winddoing’s Blog</a></li>
+<li><a href="https://blog.cnbluebox.com/blog/2017/07/24/arm64-start/" target="_blank" rel="noopener">iOS开发同学的arm64汇编入门 - 刘坤的技术博客</a></li>
+<li><a href="http://abcdxyzk.github.io/blog/2012/11/23/assembly-args/" target="_blank" rel="noopener">64位汇编参数传递 - kk Blog —— 通用基础</a></li>
+</ul>
+<blockquote>
+<p>汇编函数调用参数传递：</p>
+<ol>
+<li>在真机 ARM64 架构中，x0 ~ x7 用于传递参数</li>
+<li>在64位模拟器中，rdi, rsi, rdx, rcx, r8, r9 用于传递参数</li>
+</ol>
+</blockquote>
 
       
     </div>
