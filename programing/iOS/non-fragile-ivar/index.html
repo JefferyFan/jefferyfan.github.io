@@ -65,7 +65,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;jefferyfan.com&#x2F;images&#x2F;custom-view-non-fragile.jpeg">
 <meta property="og:image" content="http:&#x2F;&#x2F;jefferyfan.com&#x2F;images&#x2F;ivar-disassemblly.jpg">
 <meta property="og:image" content="http:&#x2F;&#x2F;jefferyfan.com&#x2F;images&#x2F;15744183679980.jpg">
-<meta property="og:updated_time" content="2019-11-22T15:45:57.229Z">
+<meta property="og:updated_time" content="2019-11-22T15:55:51.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;jefferyfan.com&#x2F;images&#x2F;ivar-layout.jpeg">
 
@@ -292,12 +292,14 @@
 <p>当然，runtime 的逻辑比这复杂，例如 atomic 加锁等。</p>
 <h2 id="什么是-Non-fragile-ivar-？"><a href="#什么是-Non-fragile-ivar-？" class="headerlink" title="什么是 Non-fragile ivar ？"></a>什么是 Non-fragile ivar ？</h2><p>fragile 的含义是脆弱的，Non-fragile ivar 解决的是 fragile ivar 的问题。</p>
 <h4 id="fragile-ivar-问题"><a href="#fragile-ivar-问题" class="headerlink" title="fragile ivar 问题"></a>fragile ivar 问题</h4><p>在 32 位的 Mac 上，假定有一个 NSCustomView 继承自 NSView，NSCustomView 有两个成员变量。（至于为什么是 32 位的 Mac，接下来会介绍。）</p>
+<a id="more"></a>
+
 <p><img src="/images/custom-view.jpeg" alt="NSCustomView"></p>
 <p>我们可以看到，NSCustomView 给 NSView 的成员变量 color 预留了内存空间。在创建 NSCustomView 的实例时，总是申请 12 字节的内存给 isa、color 和 array。</p>
 <p>如果苹果希望给 NSView 添加字体配置功能，并引入一个新的成员变量 font，NSView 成员变量增加至两个。在不重新编译的情况下，MyCustomView 只为 NSView 申请了一个成员变量的空间。</p>
 <p><img src="/images/custom-view-fragiled.jpeg" alt="custom-view-fragiled"></p>
 <p>显然，NSView 增加新功能后，NSCustomView 申请的内存空间不够用了，运行起来会造成不可预知的错误。究其原因，是因为子类所申请的内存空间数量在编译期已经确定了，NSView 改变之后需要重新编译 NSView 的所有子类，才能够有足够的内存空间来适应 NSView 的新功能。</p>
-<p>当然，我们现在不再需要担心这个问题。在 32 位的 Mac 上运行的是 Legacy Runtime，存在 fragile ivar 的问题，而iPhone 以及 64 位 Mac 上运行的 runtime 是 Modern Runtime，已经解决了这个问题，具有 Non-fragile ivar 的特性。</p>
+<p>当然，我们现在不再需要担心这个问题了。在 32 位的 Mac 上运行的是 Legacy Runtime，存在 fragile ivar 的问题，而 iPhone 以及 64 位 Mac 上运行的 runtime 是 Modern Runtime，已经解决了这个问题，具有 Non-fragile ivar 的特性。</p>
 <p>在 Modern Runtime 下，NSCustomView 的内存结构如下：<br><img src="/images/custom-view-non-fragile.jpeg" alt="custom-view-non-fragile"></p>
 <h4 id="Non-fragile-ivar"><a href="#Non-fragile-ivar" class="headerlink" title="Non-fragile ivar"></a>Non-fragile ivar</h4><p>在上面的例子中，NSCustomView 实例有两个变化点。</p>
 <ol>
